@@ -4,16 +4,23 @@ Refer [this](https://docs.google.com/document/d/1a77P4xrjjIW19FLUkyICbp5-0Gycmhe
 
 
 ## Submission Details
-Name and roll numbers of the team members.
+B V S Sai Prabandh 210050037
+M Praneeth 210050094
 
 
 ## Task 2A
 ### Approach
-[Describe your approach for Task 2A. Mention any techniques, or optimizations used.]
+In this implementation, we use the Flush+Reload side-channel technique to communicate data covertly via the CPU cache. The sender influences the cache state, and the receiver measures memory access times to determine transmitted bits.
+
+A shared file is mapped into memory using mmap(), allowing both sender and receiver to access the same memory region.
+
+Synchronization by dividing into INTERVALS and only starting at the top of intervals.(Take larger to be accurate).
+
+NUM_RELIABLE times bits are sent to ensure Accuracy
 
 ### Results
-- **Accuracy:** [Report the accuracy obtained]
-- **Bandwidth:** [Report the bandwidth obtained]
+- **Accuracy:** Most of the time 100% some times 70% too
+- **Bandwidth:** 2000bits/sec
 
 You can also mention accuracy vs bandwidths that you observed while tuning.
 
